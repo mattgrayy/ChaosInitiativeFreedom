@@ -2,14 +2,50 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-	
-	// Update is called once per frame
-	void Update (){
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * 5, GetComponent<Rigidbody2D>().velocity.y);
+
+    [SerializeField] float liftForce;
+    Rigidbody2D rb2D;
+
+    [SerializeField] Transform needle;
+    [SerializeField] Transform bat;
+
+    void Start()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        rb2D.velocity = new Vector2(Input.GetAxis("Horizontal") * 5, rb2D.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0,250));
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+            if (hit.collider != null)
+            {
+                if (hit.point.y - transform.position.y > -1)
+                {
+                    rb2D.AddForce(Vector3.up * liftForce);
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bat, transform.position, bat.rotation);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            // throw drugs
+            Transform clone = Instantiate(needle, transform.position, transform.rotation) as Transform;
+            Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mouseScreenPosition - (Vector2)clone.transform.position);
+
+            // set vector of transform directly
+            clone.transform.right = direction;
+            clone.GetComponent<Rigidbody2D>().AddForce(clone.transform.right * 500);
         }
 	}
 }
