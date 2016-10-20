@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Needle : MonoBehaviour {
 
+
+    public GameObject drop;
+    private bool IsCreated;
+
+
+
     void Update()
     {
         if (transform.eulerAngles.z > 300)
@@ -23,6 +29,20 @@ public class Needle : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Destroy(gameObject);
+        if (coll.gameObject.tag == "Player")
+        {
+
+            if (!IsCreated)
+            {
+
+                Instantiate(drop, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+                IsCreated = true;
+                Destroy(gameObject);
+            }
+
+        }
+
+
+        
     }
 }
