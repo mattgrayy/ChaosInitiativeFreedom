@@ -27,24 +27,29 @@ public class Enemy : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "needle")
+        if (coll.gameObject.tag == "Needle")
         {
-            //change to saved sprite
+            Destroy(gameObject);
         }
-        if (coll.gameObject.tag == "player")
+        if (coll.gameObject.tag == "Bat")
         {
-            attackTime = Time.time;
+            Destroy(gameObject);
+        }
+        if (coll.gameObject.tag == "Player")
+        {
+            Debug.Log("Attack Player");
+            //attackTime = Time.time;
         }
     }
 
     void OncollisionDuration2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "player")
+        if (coll.gameObject.tag == "Player")
         {
-            if (Time.time - attackTime > 0.5)
-            {
-                Debug.Log("Attack Player");
-            }
+            //if (Time.time - attackTime < 1)
+            //{
+            //    Debug.Log("Attack Player");
+            //}
 
         }
     }
