@@ -22,9 +22,9 @@ public class Player : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-            if (hit.collider != null)
+            if (hit.collider != null) // needs to include enemy and some other objects?
             {
-                if (hit.point.y - transform.position.y > -1)
+                if (hit.point.y - transform.position.y > -0.8f)
                 {
                     rb2D.AddForce(Vector3.up * liftForce);
                 }
@@ -33,7 +33,15 @@ public class Player : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bat, transform.position, bat.rotation);
+            Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mouseScreenPosition.x > transform.position.x)
+            {
+                Instantiate(bat, transform.position, bat.rotation);
+            }
+            else
+            {
+                Instantiate(bat, transform.position, Quaternion.Euler(new Vector3(0,0,180)));
+            }
         }
 
         if (Input.GetMouseButtonDown(1))
