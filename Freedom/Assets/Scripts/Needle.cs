@@ -5,8 +5,6 @@ public class Needle : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(transform.eulerAngles.z);
-
         if (transform.eulerAngles.z > 300)
         {
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - 1);
