@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     [SerializeField] Transform needle;
     [SerializeField] Transform bat;
 
+    bool hasNeedle = true;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour {
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && hasNeedle)
         {
             // throw drugs
             Transform clone = Instantiate(needle, transform.position, transform.rotation) as Transform;
@@ -54,6 +56,15 @@ public class Player : MonoBehaviour {
             // set vector of transform directly
             clone.transform.right = direction;
             clone.GetComponent<Rigidbody2D>().AddForce(clone.transform.right * 500);
+            hasNeedle = false;
         }
 	}
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.transform.tag == "Pickup")
+        {
+            hasNeedle = true;
+            Destroy(coll.gameObject);
+        }
+    }
 }
