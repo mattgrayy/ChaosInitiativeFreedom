@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public float FreedomAmount;
 	public float ReduceSpeed = 1f;
 	public Image AmountInBar;
-    public ParticleSystem overloadParticle;
+    //public ParticleSystem overloadParticle;
 
 	public bool Overload = false;
 	public float OverloadCounter = 100f;
@@ -24,6 +24,15 @@ public class GameManager : MonoBehaviour {
 
 	public float duration = 10f;
 	public float FadeTimer = 0f;
+
+
+	void GameOver()
+	{
+
+		//run the end game sequence
+		Application.LoadLevel(0);
+
+	}
 
 	public void UpHigh()
 	{
@@ -64,6 +73,16 @@ public class GameManager : MonoBehaviour {
         {
 			FreedomAmount -= ReduceSpeed * Time.deltaTime;
 			AmountInBar.fillAmount -= (ReduceSpeed / 100f) * Time.deltaTime;
+
+			if (FreedomAmount <= 0f) {
+
+				GameOver ();
+
+			}
+
+
+
+
 
 			switch (RainbowColor)
 			{
@@ -143,12 +162,19 @@ public class GameManager : MonoBehaviour {
 
 
 
+
+
+
 		//send the freedom value to all things
 		//list of tihgs
 
 		//plyer
 		//backgrounds
 		//interactable objects
+
+
+
+
 
 
 
