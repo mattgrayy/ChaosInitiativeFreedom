@@ -16,6 +16,7 @@ public class Bat : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("Hit!");
+        StopAllCoroutines();
+        Destroy(gameObject);
     }
 }
