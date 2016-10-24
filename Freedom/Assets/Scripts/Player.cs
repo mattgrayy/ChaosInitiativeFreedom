@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
     [SerializeField] Transform needle;
     [SerializeField] Transform bat;
 
-    bool hasNeedle = true;
+    bool hasNeedle = true, onGround = false;
 
     Animator myAnimator;
     SpriteRenderer myRenderer;
@@ -56,14 +56,17 @@ public class Player : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-            if (hit.collider != null) // needs to include enemy and some other objects?
+            //RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+            //if (hit.collider != null) // needs to include enemy and some other objects?
+            //{
+            //    if (hit.point.y - transform.position.y > -0.8f)
+            //    {
+            if (onGround)
             {
-                if (hit.point.y - transform.position.y > -0.8f)
-                {
-                    rb2D.AddForce(Vector3.up * liftForce);
-                }
+                rb2D.AddForce(Vector3.up * liftForce);
             }
+            //    }
+            //}
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -103,6 +106,17 @@ public class Player : MonoBehaviour {
         {
             hasNeedle = true;
             Destroy(coll.gameObject);
+        }
+        if (coll.transform.tag == "Ground")
+        {
+            onGround = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.transform.tag == "Ground")
+        {
+            onGround = false;
         }
     }
 }
