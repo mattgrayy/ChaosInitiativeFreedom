@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Enemy : MonoBehaviour {
 
     Rigidbody2D rb2D;
-    public Vector2 moveSpeed, hitForce;
+    [SerializeField] float hitForce, moveSpeed;
     public GameObject target;
     private float attackTime;
     public bool beenHit, knockBack;
@@ -23,9 +24,9 @@ public class Enemy : MonoBehaviour {
         if (!knockBack)
         {
             if (target.transform.position.x < transform.position.x)
-            { rb2D.MovePosition(rb2D.position - moveSpeed * Time.fixedDeltaTime); }
+            { rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y); }
             else if (target.transform.position.x > transform.position.x)
-            { rb2D.MovePosition(rb2D.position + moveSpeed * Time.fixedDeltaTime); }
+            { rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y); }
         }
         else if (knockBack)
         {
@@ -45,12 +46,16 @@ public class Enemy : MonoBehaviour {
             Destroy(gameObject);
         }
         if (coll.gameObject.tag == "Bat")
-        {
+        {            
             if(!beenHit)
             {
                 beenHit = true;
-                rb2D.AddForce(hitForce, ForceMode2D.Impulse);
+                rb2D.AddForce(Vector2.up * hitForce, ForceMode2D.Impulse);
                 knockBack = true;
+                if (target.transform.position.x < transform.position.x)
+                { rb2D.AddForce(Vector2.right * hitForce, ForceMode2D.Impulse); }
+                else if (target.transform.position.x > transform.position.x)
+                { rb2D.AddForce(Vector2.left * hitForce, ForceMode2D.Impulse); }
             }
             else if (beenHit)
             {
@@ -62,19 +67,29 @@ public class Enemy : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             Debug.Log("Attack Player");
-            //attackTime = Time.time;
+            
         }
     }
 
-    void OncollisionDuration2D(Collider2D coll)
+    void OnCollisionStay2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            //if (Time.time - attackTime < 1)
+            moveSpeed = 0;
+
+                //if (Time.time - attackTime < 1)
             //{
             //    Debug.Log("Attack Player");
             //}
 
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            moveSpeed = 1;
         }
     }
 }
