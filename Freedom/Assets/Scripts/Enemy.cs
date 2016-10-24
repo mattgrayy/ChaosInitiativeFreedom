@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour {
 
     Rigidbody2D rb2D;
     public Vector2 moveSpeed, hitForce;
-    public GameObject target, needle;
+    public GameObject target;
     private float attackTime;
     public bool beenHit, knockBack;
     float elapsedTime;

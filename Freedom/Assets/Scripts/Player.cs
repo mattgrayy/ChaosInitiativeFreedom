@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
@@ -11,15 +11,48 @@ public class Player : MonoBehaviour {
 
     bool hasNeedle = true;
 
+    Animator myAnimator;
+    SpriteRenderer myRenderer;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update ()
     {
-        rb2D.velocity = new Vector2(Input.GetAxis("Horizontal") * 5, rb2D.velocity.y);
+        float horizAxis = Input.GetAxis("Horizontal");
+
+        if (horizAxis != 0)
+        {
+            if (horizAxis > 0)
+            {
+                myRenderer.flipX = false;
+            }
+            else
+            {
+                myRenderer.flipX = true;
+            }
+
+            // switch for different types (normal, medium, high)
+            if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Gaz norm walk test") && !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Gaz_norm_hitting"))
+            {
+                myAnimator.Play("Gaz norm walk test");
+            }
+
+            rb2D.velocity = new Vector2(horizAxis * 5, rb2D.velocity.y);
+        }
+        else
+        {
+            // switch for different types (normal, medium, high)
+            if (!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Gaz_norm_bob") && !myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Gaz_norm_hitting"))
+            {
+                myAnimator.Play("Gaz_norm_bob");
+            }
+        }
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -35,19 +68,24 @@ public class Player : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
+            
             Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (mouseScreenPosition.x > transform.position.x)
             {
+                myRenderer.flipX = false;
                 Instantiate(bat, transform.position, bat.rotation);
             }
             else
             {
+                myRenderer.flipX = true;
                 Instantiate(bat, transform.position, Quaternion.Euler(new Vector3(0,0,180)));
             }
+            myAnimator.Play("Gaz_norm_hitting");
         }
 
         if (Input.GetMouseButtonDown(1) && hasNeedle)
         {
+            myAnimator.Play("Gaz_norm_hitting");
             // throw drugs
             Transform clone = Instantiate(needle, transform.position, transform.rotation) as Transform;
             Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
