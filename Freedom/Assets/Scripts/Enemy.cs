@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+
+
+	public StageControler stage;
+
     Rigidbody2D rb2D;
     public Vector2 moveSpeed, hitForce;
     public GameObject target;
@@ -16,6 +20,7 @@ public class Enemy : MonoBehaviour {
         knockBack = false;
         rb2D = GetComponent<Rigidbody2D>();
         //target = GetComponent<>();
+
     }
 	
 	void Update ()
@@ -42,7 +47,10 @@ public class Enemy : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Needle")
         {
-            Destroy(gameObject);
+			stage.NeedleKill ();
+			Debug.Log("needle kill");
+            //Destroy(gameObject);
+			gameObject.SetActive(false);
         }
         if (coll.gameObject.tag == "Bat")
         {
@@ -54,7 +62,10 @@ public class Enemy : MonoBehaviour {
             }
             else if (beenHit)
             {
-                Destroy(gameObject);
+				Debug.Log("bat kill");
+                //Destroy(gameObject);
+				stage.BatKill ();
+				gameObject.SetActive(false);
             }
             
 
@@ -77,4 +88,16 @@ public class Enemy : MonoBehaviour {
 
         }
     }
+
+
+	public void setStageControler(StageControler cont)
+	{
+
+		stage = cont;
+
+
+
+	}
+
+
 }
