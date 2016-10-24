@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour {
     {
         beenHit = false;
         knockBack = false;
-        rb2D = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();       
         //target = GetComponent<>();
     }
 	
@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour {
             if (elapsedTime >= 5f)
             {
                 knockBack = false;
+                gameObject.layer = LayerMask.NameToLayer("Enemy");
             }
         }
 
@@ -56,6 +57,8 @@ public class Enemy : MonoBehaviour {
                 { rb2D.AddForce(Vector2.right * hitForce, ForceMode2D.Impulse); }
                 else if (target.transform.position.x > transform.position.x)
                 { rb2D.AddForce(Vector2.left * hitForce, ForceMode2D.Impulse); }
+                gameObject.layer = LayerMask.NameToLayer("EnemyHit");
+
             }
             else if (beenHit)
             {
@@ -67,7 +70,8 @@ public class Enemy : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             Debug.Log("Attack Player");
-            
+            moveSpeed = 0;
+
         }
     }
 
@@ -76,12 +80,6 @@ public class Enemy : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             moveSpeed = 0;
-
-                //if (Time.time - attackTime < 1)
-            //{
-            //    Debug.Log("Attack Player");
-            //}
-
         }
     }
 
