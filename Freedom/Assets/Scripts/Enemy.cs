@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour {
 
 
 	public StageControler stage;
-
     Rigidbody2D rb2D;
     [SerializeField] float hitForce, moveSpeed;
     public GameObject target;
@@ -80,9 +79,10 @@ public class Enemy : MonoBehaviour {
         }
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("Attack Player");
+            //Debug.Log("Attack Player");
             moveSpeed = 0;
-
+            //transform.GetComponent<GameManager>().DownHigh();
+            attackTime = 0f;
         }
     }
 
@@ -91,6 +91,13 @@ public class Enemy : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             moveSpeed = 0;
+            attackTime = attackTime + Time.deltaTime;
+            if (attackTime >= 0.5f)
+            {
+                //transform.GetComponent<GameManager>().DownHigh();
+                attackTime = 0f;
+                Debug.Log("Attack after 1 second");
+            }
         }
     }
 
