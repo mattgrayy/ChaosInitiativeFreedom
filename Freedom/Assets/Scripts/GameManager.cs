@@ -27,14 +27,18 @@ public class GameManager : MonoBehaviour {
 
 	public void UpHigh()
 	{
+		Debug.Log("up hight start");
 		FreedomAmount += 20f;
 		AmountInBar.fillAmount += 0.2f;
 
-		if (FreedomAmount >= 100f)
+		if (FreedomAmount > 100f)
         {
+			print ("overlaod");
 			Overload = true;
-            overloadParticle.Simulate(0);
+            //overloadParticle.Simulate(0);
+
             FreedomAmount = 100f;
+			Debug.Log("freedom 100");
 		}
 	}
 
@@ -128,13 +132,29 @@ public class GameManager : MonoBehaviour {
 			AmountInBar.CrossFadeColor (Color.red, 1f, true, true);
 			OverloadCounter -= 10f * Time.deltaTime;
 
-			if (OverloadCounter <= 0)
+			if (OverloadCounter <= 0f)
             {
-                overloadParticle.Stop();
+                //overloadParticle.Stop();
 				Overload = false;
 				AmountInBar.CrossFadeColor (Color.blue, 1f, true, true);
 				OverloadCounter = 100f;
 			}
 		}
+
+
+
+		//send the freedom value to all things
+		//list of tihgs
+
+		//plyer
+		//backgrounds
+		//interactable objects
+
+
+
+
+
+
+
 	}
 }
