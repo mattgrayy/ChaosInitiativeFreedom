@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
@@ -12,9 +12,8 @@ public class GameManager : MonoBehaviour {
 	public bool Overload = false;
 	public float OverloadCounter = 100f;
 
-	private int RainbowColor = 1;
-
 	//colours
+	private int RainbowColor = 1;
 	private Color Red = Color.red;
 	private Color Orange = Color.magenta;
 	private Color Yellow = Color.yellow;
@@ -24,6 +23,10 @@ public class GameManager : MonoBehaviour {
 
 	public float duration = 10f;
 	public float FadeTimer = 0f;
+
+
+	public List<GameObject> GameObjectList;
+
 
 
 	void GameOver()
@@ -79,10 +82,6 @@ public class GameManager : MonoBehaviour {
 				GameOver ();
 
 			}
-
-
-
-
 
 			switch (RainbowColor)
 			{
@@ -168,19 +167,10 @@ public class GameManager : MonoBehaviour {
 		//send the freedom value to all things
 		//list of tihgs
 
-		//plyer
-		//backgrounds
-		//interactable objects
+		foreach (GameObject thing in GameObjectList) {
 
+			//			thing.
 
-
-
-
-
-
-
-
-
-
+		}
 	}
 }
