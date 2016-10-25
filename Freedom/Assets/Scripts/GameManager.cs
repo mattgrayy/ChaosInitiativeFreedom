@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		FreedomAmount = 100f;
 		OverloadCounter = 100f;
-		ReduceSpeed = 1.0f;
+		ReduceSpeed = 5.0f;
 		RainbowColor = 1;
 		AmountInBar.color = Color.white;
 	}

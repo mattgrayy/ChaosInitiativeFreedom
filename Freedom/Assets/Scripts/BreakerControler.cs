@@ -5,19 +5,26 @@ public class BreakerControler : MonoBehaviour {
 
 	public StageControler controler;
 	public GameObject cameraObject;
+	public GameObject collider;
+
+	private bool disabled = false;
+
 
 	void OnTriggerExit2D(Collider2D con)
 	{
-		Debug.Log ("triffer leave");
-		if (con.gameObject.tag == "Player") {
+		if (!disabled) {
+			Debug.Log ("triffer leave");
+			if (con.gameObject.tag == "Player") {
 
-			transform.GetComponent<BoxCollider2D> ().isTrigger = false;
-
-			cameraObject.GetComponent<CameraControler> ().locked = true;
-			Debug.Log ("locked");
+				collider.transform.GetComponent<BoxCollider2D> ().isTrigger = false;
+				Debug.Log (collider.transform.GetComponent<BoxCollider2D> ().isTrigger);
+				cameraObject.GetComponent<CameraControler> ().StartStage ();
+				cameraObject.GetComponent<CameraControler> ().locked = true;
+				Debug.Log ("locked");
+				disabled = true;
+			}
 		}
+
 	}
-
-
 }
 
