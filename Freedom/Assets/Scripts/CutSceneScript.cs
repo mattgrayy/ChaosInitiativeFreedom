@@ -43,8 +43,12 @@ public class CutSceneScript : MonoBehaviour {
 
 		}
 
+
 		if (SequencePos == 3) {
 			Debug.Log ("gfjgfjsdgf");
+
+		if (SequencePos == 7) {
+
 			title.gameObject.SetActive (true);
 			startButton.gameObject.SetActive (true);
 			SequencePos++;

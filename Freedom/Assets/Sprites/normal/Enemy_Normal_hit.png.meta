@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 297341ba52603594da6ef3a155a96503
-timeCreated: 1477388808
+timeCreated: 1477418154
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -34,7 +34,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -62,8 +62,8 @@ TextureImporter:
         y: 2
         width: 21
         height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_Normal_hit_1
@@ -73,8 +73,8 @@ TextureImporter:
         y: 2
         width: 18
         height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_Normal_hit_2
@@ -84,8 +84,8 @@ TextureImporter:
         y: 2
         width: 19
         height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_Normal_hit_3
@@ -95,8 +95,8 @@ TextureImporter:
         y: 2
         width: 19
         height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_Normal_hit_4
@@ -106,8 +106,8 @@ TextureImporter:
         y: 2
         width: 19
         height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

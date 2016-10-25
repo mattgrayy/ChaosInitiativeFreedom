@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour {
 
 
 	public List<GameObject> GameObjectList;
-
+    public GameObject player;
+    public StageControler myStageController;
 
 
 	void GameOver()
@@ -40,30 +41,25 @@ public class GameManager : MonoBehaviour {
 
 	public void UpHigh()
 	{
-		Debug.Log("up hight start");
-		FreedomAmount += 20f;
+		FreedomAmount += 10f;
 
 		if (FreedomAmount > 100f)
         {
-			print ("overlaod");
-			Overload = true;
-            //overloadParticle.Simulate(0);
+			//Overload = true;
 
             FreedomAmount = 100f;
-			Debug.Log("freedom 100");
 		}
 	}
 
 	public void DownHigh()
 	{
-		Debug.Log ("down");
-		FreedomAmount -= 20f;
-		AmountInBar.fillAmount -= 0.2f;
+		FreedomAmount -= 10f;
+		AmountInBar.fillAmount -= 0.1f;
 	}
 
 	// Use this for initialization
 	void Start () {
-		FreedomAmount = 100f;
+        FreedomAmount = 100f;
 		OverloadCounter = 100f;
 		ReduceSpeed = 5.0f;
 		RainbowColor = 1;
@@ -160,37 +156,40 @@ public class GameManager : MonoBehaviour {
 
 		switch (previousFreedomLevel) {
 		case 0:
-			if (FreedomAmount < 50) {
+			if (FreedomAmount < 65) {
 				foreach (GameObject thing in GameObjectList) {
-					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
+                    player.GetComponent<Player>().changeHighness(1);
+                        myStageController.changeHighness(1);
 				}
 				previousFreedomLevel = 1;
 			}
 			break;
 		case 1:
-			if (FreedomAmount >= 50 || FreedomAmount < 25) {
+			if (FreedomAmount >= 65 || FreedomAmount < 35) {
 				int newFreedomLevel;
 
-				if (FreedomAmount >= 50) {
+				if (FreedomAmount >= 65) {
 					newFreedomLevel = 0;
 				} else {
 					newFreedomLevel = 2;
 				}
 
 				foreach (GameObject thing in GameObjectList) {
-					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (newFreedomLevel);
-				}
+                        player.GetComponent<Player>().changeHighness(newFreedomLevel);
+                        myStageController.changeHighness(newFreedomLevel);
+                    }
 				previousFreedomLevel = newFreedomLevel;
 			}
 			break;
 		case 2:
-			if (FreedomAmount >= 25) {
+			if (FreedomAmount >= 35) {
 				foreach (GameObject thing in GameObjectList) {
-					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
-				}
+                        player.GetComponent<Player>().changeHighness(1);
+                        myStageController.changeHighness(1);
+                    }
 				previousFreedomLevel = 1;
 			}
 			break;

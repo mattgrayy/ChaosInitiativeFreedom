@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e3ab18e88f4031449bea1bb6cd7cbcc3
-timeCreated: 1477411455
+timeCreated: 1477418630
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -66,8 +66,8 @@ TextureImporter:
         y: 7
         width: 30
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_normal_hitting_1
@@ -77,8 +77,8 @@ TextureImporter:
         y: 7
         width: 29
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_normal_hitting_2
@@ -88,8 +88,8 @@ TextureImporter:
         y: 8
         width: 29
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_normal_hitting_3
@@ -99,43 +99,45 @@ TextureImporter:
         y: 8
         width: 29
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_normal_hitting_4
       rect:
         serializedVersion: 2
-        x: 177
+        x: 178
         y: 8
-        width: 34
+        width: 33
         height: 49
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 49}
-        - {x: -16, y: 0}
-        - {x: 17, y: 0}
-        - {x: 17, y: 47}
-        - {x: 11, y: 49}
+      - - {x: 6.5, y: 24.5}
+        - {x: -16.5, y: 24.5}
+        - {x: -16.5, y: -23.5}
+        - {x: -15.5, y: -24.5}
+        - {x: 16.5, y: -24.5}
+        - {x: 16.5, y: 11.5}
+        - {x: 13.5, y: 23.5}
     - name: Gaz_normal_hitting_5
       rect:
         serializedVersion: 2
-        x: 251
+        x: 249
         y: 8
-        width: 39
+        width: 41
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -19.5, y: 48}
-        - {x: -19.5, y: 22}
-        - {x: -16.5, y: 0}
-        - {x: 19.5, y: 0}
-        - {x: 19.5, y: 45}
-        - {x: 16.5, y: 48}
+      - - {x: -20.5, y: 24}
+        - {x: -20.5, y: 9}
+        - {x: -11.5, y: -24}
+        - {x: 20.5, y: -24}
+        - {x: 20.5, y: 20}
+        - {x: 16.5, y: 24}
     - name: Gaz_normal_hitting_6
       rect:
         serializedVersion: 2
@@ -143,15 +145,15 @@ TextureImporter:
         y: 8
         width: 45
         height: 49
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -22.5, y: 49}
-        - {x: -22.5, y: 7}
-        - {x: -19.5, y: 0}
-        - {x: 22.5, y: 0}
-        - {x: 22.5, y: 49}
+      - - {x: -22.5, y: 24.5}
+        - {x: -22.5, y: -17.5}
+        - {x: -19.5, y: -24.5}
+        - {x: 22.5, y: -24.5}
+        - {x: 22.5, y: 24.5}
     - name: Gaz_normal_hitting_7
       rect:
         serializedVersion: 2
@@ -159,16 +161,16 @@ TextureImporter:
         y: 8
         width: 36
         height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18, y: 52}
-        - {x: -18, y: 40}
-        - {x: -12, y: 0}
-        - {x: 18, y: 0}
-        - {x: 18, y: 44}
-        - {x: 10, y: 52}
+      - - {x: -18, y: 26}
+        - {x: -18, y: 14}
+        - {x: -12, y: -26}
+        - {x: 18, y: -26}
+        - {x: 18, y: 18}
+        - {x: 10, y: 26}
     - name: Gaz_normal_hitting_8
       rect:
         serializedVersion: 2
@@ -176,8 +178,8 @@ TextureImporter:
         y: 6
         width: 29
         height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

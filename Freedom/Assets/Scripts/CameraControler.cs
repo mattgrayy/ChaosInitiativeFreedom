@@ -28,12 +28,12 @@ public class CameraControler : MonoBehaviour {
 	void Start () {
 	
 		offset = transform.position - player.transform.position + new Vector3 (0, 1f, 0);;
-		Stage0Lock = new Vector3 (1f, 0.23f, -10);
-		Stage1Lock = new Vector3 (26.7f, 0.23f, -10);
-		Stage2Lock = new Vector3 (52.8f, 0.23f, -10);
+		Stage0Lock = new Vector3 (-3.1f, 0.1f, -10);
+		Stage1Lock = new Vector3 (34.26f, 0.1f, -10);
+		Stage2Lock = new Vector3 (70.52f, 0.1f, -10);
 		stage = 0;
-		locked = false;
-		stageStart = false;
+		locked = true;
+		stageStart = true;
 	}
 	
 	// Update is called once per frame
@@ -46,9 +46,18 @@ public class CameraControler : MonoBehaviour {
 		if (locked == false) {
 			
 			//transform.position = player.transform.position + offset;
-			transform.position = Vector3.Lerp (transform.position, player.transform.position + offset, Time.deltaTime);
+			transform.position = Vector3.Lerp (transform.position, new Vector3(player.transform.position.x, 0.1f, -10f) /* player.transform.position + offset*/, Time.deltaTime);
 
-		} else {
+            if(transform.position.x < -3.1f)
+            {
+                transform.position = new Vector3(-3.1f, transform.position.y, transform.position.z);
+            }
+            if (transform.position.x > 70.52f)
+            {
+                transform.position = new Vector3(70.52f, transform.position.y, transform.position.z);
+            }
+
+        } else {
 
 			switch (stage)
 			{

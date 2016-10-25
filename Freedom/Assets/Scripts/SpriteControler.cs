@@ -9,7 +9,6 @@ public class SpriteControler : MonoBehaviour {
 
 	public void setFreedomAmount (int spriteNo)
 	{
-		Debug.Log ("stfreedo,amount");
 		swapper.swap (spriteNo);
 
 	}

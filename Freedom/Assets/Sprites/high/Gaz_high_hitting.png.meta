@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: be1a0ad9cdbebd640ab093594abb388f
-timeCreated: 1477330343
+timeCreated: 1477417999
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -38,7 +38,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -66,8 +66,8 @@ TextureImporter:
         y: 0
         width: 31
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_1
@@ -77,8 +77,8 @@ TextureImporter:
         y: 0
         width: 29
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_2
@@ -88,8 +88,8 @@ TextureImporter:
         y: 0
         width: 30
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_3
@@ -99,8 +99,8 @@ TextureImporter:
         y: 0
         width: 30
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_4
@@ -110,8 +110,8 @@ TextureImporter:
         y: 0
         width: 29
         height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_5
@@ -121,8 +121,8 @@ TextureImporter:
         y: 0
         width: 30
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_6
@@ -132,8 +132,8 @@ TextureImporter:
         y: 0
         width: 30
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_7
@@ -143,8 +143,8 @@ TextureImporter:
         y: 0
         width: 29
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Gaz_high_hitting_8
@@ -154,8 +154,8 @@ TextureImporter:
         y: 0
         width: 29
         height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []
