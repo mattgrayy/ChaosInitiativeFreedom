@@ -6,15 +6,14 @@ public class Enemy : MonoBehaviour
 {
 
 
-    [SerializeField]
-    GameManager GM;
+    [SerializeField] GameManager GM;
     public StageControler stage;
     Rigidbody2D rb2D;
     [SerializeField]
     public float hitForce, moveSpeed;
     public GameObject target;
     private float attackTime;
-    public bool beenHit, knockBack, beenKilled;
+    public bool beenHit, knockBack, beenKilled, playerHit;
     float elapsedTime;
 
     int highness = 0;
@@ -39,6 +38,7 @@ public class Enemy : MonoBehaviour
     {
         beenHit = false;
         knockBack = false;
+        playerHit = false;
         rb2D = GetComponent<Rigidbody2D>();
         //target = GetComponent<>();
         myAnimator = GetComponent<Animator>();
@@ -150,6 +150,7 @@ public class Enemy : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
+            //Debug.Log("touching player");
             moveSpeed = 0;
             attackTime = attackTime + Time.deltaTime;
             if (attackTime >= 0.5f)
@@ -159,6 +160,7 @@ public class Enemy : MonoBehaviour
                     myAnimator.Play("enemy_normal_hitting");
                 }
                 GM.DownHigh();
+                playerHit = true;
                 attackTime = 0f;
 				coll.gameObject.GetComponent<Player> ().gethit ();
 				playerHit.Play ();

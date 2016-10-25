@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] float liftForce;
     Rigidbody2D rb2D;
-
+    [SerializeField] Enemy enemy;
     [SerializeField] Transform needle;
     [SerializeField] Transform bat;
 
@@ -205,6 +205,12 @@ public class Player : MonoBehaviour {
         {
             needleCooldown += Time.deltaTime;
         }
+
+        if (enemy.playerHit == true)
+        {
+            StartCoroutine("ColorFlash");
+            enemy.playerHit = false;
+        }
 	}
 
     public void changeHighness(int newHighness)
@@ -245,5 +251,21 @@ public class Player : MonoBehaviour {
         {
             onGround = false;
         }
+    }
+
+    IEnumerator ColorFlash()
+    {
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return null;
     }
 }
