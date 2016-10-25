@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9313315888bc5414ea904974670456e2
-timeCreated: 1477319756
+timeCreated: 1477411230
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -57,9 +57,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 7
         width: 31
-        height: 46
+        height: 53
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -68,35 +68,36 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 0
+        y: 7
         width: 35
-        height: 45
+        height: 53
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 45}
+      - - {x: -13.5, y: 53}
+        - {x: -17.5, y: 48}
         - {x: -17.5, y: 0}
         - {x: 17.5, y: 0}
-        - {x: 17.5, y: 45}
+        - {x: 17.5, y: 53}
     - name: Gaz_mid_bob_2
       rect:
         serializedVersion: 2
         x: 88
-        y: 2
+        y: 9
         width: 34
-        height: 41
+        height: 49
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15, y: 41}
-        - {x: -17, y: 34}
-        - {x: -17, y: 5}
+      - - {x: -15, y: 49}
+        - {x: -17, y: 43}
+        - {x: -17, y: 3}
         - {x: -15, y: 0}
         - {x: 17, y: 0}
-        - {x: 17, y: 24}
-        - {x: 9, y: 41}
+        - {x: 17, y: 28}
+        - {x: 4, y: 49}
     outline: []
   spritePackingTag: 
   userData: 

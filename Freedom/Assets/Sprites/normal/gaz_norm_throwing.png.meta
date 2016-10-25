@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 guid: 254f8c83569d7334eba627982df16309
-timeCreated: 1477408920
+timeCreated: 1477411205
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: gaz_norm_throwing_0
+    21300002: gaz_norm_throwing_1
+    21300004: gaz_norm_throwing_2
+    21300006: gaz_norm_throwing_3
+    21300008: gaz_norm_throwing_4
+    21300010: gaz_norm_throwing_5
+    21300012: gaz_norm_throwing_6
+    21300014: gaz_norm_throwing_7
+    21300016: gaz_norm_throwing_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +47,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +58,106 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: gaz_norm_throwing_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 29
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 3
+        width: 31
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 3
+        width: 29
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 3
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 3
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 3
+        width: 29
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 3
+        width: 29
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2
+        width: 31
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: gaz_norm_throwing_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 3
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

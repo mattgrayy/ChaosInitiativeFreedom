@@ -1,9 +1,19 @@
 fileFormatVersion: 2
 guid: 0fbf06696bc07674698d2b140d3aa0e1
-timeCreated: 1477408920
+timeCreated: 1477411177
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Gaz_high_throwing_0
+    21300002: Gaz_high_throwing_1
+    21300004: Gaz_high_throwing_3
+    21300006: Gaz_high_throwing_7
+    21300008: Gaz_high_throwing_8
+    21300010: Gaz_high_throwing_9
+    21300012: Gaz_high_throwing_2
+    21300014: Gaz_high_throwing_4
+    21300016: Gaz_high_throwing_5
+    21300018: Gaz_high_throwing_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +48,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +59,168 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Gaz_high_throwing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 31
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Gaz_high_throwing_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 33
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 50}
+        - {x: -16.5, y: 0}
+        - {x: 16.5, y: 0}
+        - {x: 16.5, y: 48}
+        - {x: 4.5, y: 50}
+    - name: Gaz_high_throwing_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 30
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Gaz_high_throwing_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 30
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Gaz_high_throwing_8
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 41
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: 46}
+        - {x: 13.5, y: 47}
+        - {x: 0.5, y: 47}
+        - {x: -20.5, y: 42}
+        - {x: -20.5, y: 11}
+        - {x: -15.5, y: 0}
+        - {x: 20.5, y: 0}
+        - {x: 20.5, y: 31}
+        - {x: 19.5, y: 35}
+      - - {x: -1.5, y: 45}
+        - {x: -1.5, y: 47}
+        - {x: -6.5, y: 47}
+        - {x: -4.5, y: 44}
+    - name: Gaz_high_throwing_9
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 0
+        width: 37
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 50}
+        - {x: -15.5, y: 19}
+        - {x: -12.5, y: 0}
+        - {x: 18.5, y: 0}
+        - {x: 18.5, y: 46}
+        - {x: 11.5, y: 50}
+      - - {x: -18.5, y: 24}
+        - {x: -15.5, y: 25}
+        - {x: -15.5, y: 28}
+        - {x: -17.5, y: 30}
+        - {x: -18.5, y: 30}
+    - name: Gaz_high_throwing_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 41
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 45}
+        - {x: -20.5, y: 43}
+        - {x: -20.5, y: 3}
+        - {x: -17.5, y: 0}
+        - {x: 20.5, y: 0}
+        - {x: 20.5, y: 45}
+    - name: Gaz_high_throwing_4
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 36
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 43}
+        - {x: -18, y: 0}
+        - {x: 14, y: 0}
+        - {x: 14, y: 28}
+        - {x: 9, y: 43}
+      - - {x: 14, y: 1}
+        - {x: 14, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 4}
+        - {x: 17, y: 4}
+      - - {x: 14, y: 22}
+        - {x: 14, y: 8}
+        - {x: 16, y: 6}
+        - {x: 18, y: 7}
+        - {x: 18, y: 24}
+        - {x: 16, y: 24}
+    - name: Gaz_high_throwing_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 29
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Gaz_high_throwing_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ce0184ee9a4953248880c30ecb12b852
-timeCreated: 1477322815
+timeCreated: 1477411292
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -60,112 +60,105 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
-        width: 35
+        y: 7
+        width: 37
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 46}
-        - {x: -17.5, y: 14}
-        - {x: -12.5, y: 0}
+      - - {x: -18.5, y: 46}
+        - {x: -18.5, y: 0}
         - {x: 17.5, y: 0}
-        - {x: 17.5, y: 45}
-        - {x: 16.5, y: 46}
+        - {x: 18.5, y: 1}
+        - {x: 18.5, y: 46}
+    - name: gaz_mid_walking_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 7
+        width: 37
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 46}
+        - {x: -18.5, y: 4}
+        - {x: -16.5, y: 0}
+        - {x: 18.5, y: 0}
+        - {x: 18.5, y: 46}
     - name: gaz_mid_walking_2
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 33
+        x: 82
+        y: 7
+        width: 38
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16.5, y: 46}
-        - {x: -16.5, y: 2}
-        - {x: -11.5, y: 0}
-        - {x: 16.5, y: 0}
-        - {x: 16.5, y: 44}
-        - {x: 14.5, y: 46}
+      - - {x: -16, y: 46}
+        - {x: -19, y: 42}
+        - {x: -19, y: 1}
+        - {x: -17, y: 0}
+        - {x: 19, y: 0}
+        - {x: 19, y: 33}
+        - {x: 9, y: 46}
     - name: gaz_mid_walking_3
       rect:
         serializedVersion: 2
-        x: 123
-        y: 0
+        x: 121
+        y: 7
         width: 36
-        height: 46
+        height: 53
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18, y: 46}
-        - {x: -18, y: 0}
+      - - {x: 11, y: 48}
+        - {x: -11, y: 48}
+        - {x: -18, y: 47}
+        - {x: -18, y: 9}
+        - {x: -13, y: 0}
         - {x: 18, y: 0}
         - {x: 18, y: 36}
-        - {x: 11, y: 46}
+        - {x: 13, y: 47}
     - name: gaz_mid_walking_4
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 35
-        height: 46
+        x: 159
+        y: 8
+        width: 36
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 46}
-        - {x: -17.5, y: 11}
-        - {x: -8.5, y: 0}
-        - {x: 17.5, y: 0}
-        - {x: 17.5, y: 46}
-      - - {x: 14.5, y: 28}
-        - {x: 16.5, y: 26}
-        - {x: 17.5, y: 26}
-        - {x: 17.5, y: 31}
-        - {x: 15.5, y: 31}
-      - - {x: 14.5, y: 39}
-        - {x: 16.5, y: 37}
-        - {x: 17.5, y: 37}
-        - {x: 17.5, y: 44}
-        - {x: 14.5, y: 43}
+      - - {x: -18, y: 47}
+        - {x: -18, y: 5}
+        - {x: -11, y: 0}
+        - {x: 18, y: 0}
+        - {x: 18, y: 46}
+        - {x: 16, y: 47}
     - name: gaz_mid_walking_5
       rect:
         serializedVersion: 2
         x: 196
-        y: 0
-        width: 33
-        height: 46
+        y: 8
+        width: 34
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16.5, y: 46}
-        - {x: -16.5, y: 14}
-        - {x: -12.5, y: 4}
-        - {x: -9.5, y: 0}
-        - {x: 16.5, y: 0}
-        - {x: 16.5, y: 33}
-        - {x: 12.5, y: 46}
-    - name: gaz_mid_walking_1
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 0
-        width: 35
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -17.5, y: 46}
-        - {x: -17.5, y: 0}
-        - {x: 17.5, y: 0}
-        - {x: 17.5, y: 38}
-        - {x: 10.5, y: 46}
+      - - {x: -17, y: 52}
+        - {x: -17, y: 6}
+        - {x: -11, y: 0}
+        - {x: 17, y: 0}
+        - {x: 17, y: 36}
+        - {x: 6, y: 52}
     outline: []
   spritePackingTag: 
   userData: 
