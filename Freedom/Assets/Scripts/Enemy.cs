@@ -2,28 +2,31 @@
 using System.Collections;
 
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
 
-	[SerializeField] GameManager GM;
-	public StageControler stage;
+    [SerializeField]
+    GameManager GM;
+    public StageControler stage;
     Rigidbody2D rb2D;
-    [SerializeField] float hitForce, moveSpeed;
+    [SerializeField]
+    float hitForce, moveSpeed;
     public GameObject target;
     private float attackTime;
-    public bool beenHit, knockBack;
+    public bool beenHit, knockBack, beenKilled;
     float elapsedTime;
 
-	void Start ()
+    void Start()
     {
         beenHit = false;
         knockBack = false;
-        rb2D = GetComponent<Rigidbody2D>();       
+        rb2D = GetComponent<Rigidbody2D>();
         //target = GetComponent<>();
 
     }
-	
-	void Update ()
+
+    void Update()
     {
         if (!knockBack)
         {
@@ -35,48 +38,66 @@ public class Enemy : MonoBehaviour {
         else if (knockBack)
         {
             elapsedTime = elapsedTime + Time.deltaTime;
-            if (elapsedTime >= 5f)
+            if (beenKilled)
             {
-                knockBack = false;
-                gameObject.layer = LayerMask.NameToLayer("Enemy");
+                Debug.Log("killed loop");
+                if (elapsedTime >= 3f)
+                {
+                    Debug.Log("Change Layer");
+                    knockBack = false;
+                    beenKilled = false;
+                    gameObject.layer = LayerMask.NameToLayer("Enemy");
+                    Debug.Log("Setting to false");
+                    gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                if (elapsedTime >= 5f)
+                {
+                    Debug.Log("wrong if");
+                    knockBack = false;
+                    gameObject.layer = LayerMask.NameToLayer("Enemy");
+                }
             }
         }
 
-	}
+    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Needle")
         {
-			GM.AmountInBar.fillAmount += 0.2f;
-			stage.NeedleKill ();
-			Debug.Log("needle kill");
+            GM.AmountInBar.fillAmount += 0.2f;
+            stage.NeedleKill();
+            Debug.Log("needle kill");
             //Destroy(gameObject);
-			gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         if (coll.gameObject.tag == "Bat")
-        {            
-            if(!beenHit)
+        {
+            StartCoroutine("ColorFlash");
+            rb2D.AddForce(Vector2.up * hitForce, ForceMode2D.Impulse);
+            knockBack = true;
+            elapsedTime = 0;
+            if (target.transform.position.x < transform.position.x)
+            { rb2D.AddForce(Vector2.right * hitForce, ForceMode2D.Impulse); }
+            else if (target.transform.position.x > transform.position.x)
+            { rb2D.AddForce(Vector2.left * hitForce, ForceMode2D.Impulse); }
+
+            if (!beenHit)
             {
                 beenHit = true;
-                rb2D.AddForce(Vector2.up * hitForce, ForceMode2D.Impulse);
-                knockBack = true;
-                if (target.transform.position.x < transform.position.x)
-                { rb2D.AddForce(Vector2.right * hitForce, ForceMode2D.Impulse); }
-                else if (target.transform.position.x > transform.position.x)
-                { rb2D.AddForce(Vector2.left * hitForce, ForceMode2D.Impulse); }
                 gameObject.layer = LayerMask.NameToLayer("EnemyHit");
-
             }
             else if (beenHit)
             {
-				Debug.Log("bat kill");
+                Debug.Log("bat kill");
                 //Destroy(gameObject);
-				stage.BatKill ();
-				gameObject.SetActive(false);
+                stage.BatKill();
+                beenKilled = true;
+                gameObject.layer = LayerMask.NameToLayer("EnemyKill");
             }
-            
-
         }
         if (coll.gameObject.tag == "Player")
         {
@@ -110,14 +131,28 @@ public class Enemy : MonoBehaviour {
     }
 
 
-	public void setStageControler(StageControler cont)
-	{
+    public void setStageControler(StageControler cont)
+    {
 
-		stage = cont;
-
-
-
-	}
+        stage = cont;
 
 
+
+    }
+
+    IEnumerator ColorFlash()
+    {
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Renderer>().material.color = Color.white;
+        yield return null;
+    }
 }
