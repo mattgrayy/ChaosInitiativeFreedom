@@ -154,7 +154,7 @@ public class Player : MonoBehaviour {
 
             // set vector of transform directly
             clone.transform.right = direction;
-            clone.GetComponent<Rigidbody2D>().AddForce(clone.transform.right * 500);
+            clone.GetComponent<Rigidbody2D>().AddForce(clone.transform.right * 800);
             hasNeedle = false;
             /*
             switch (highness)
