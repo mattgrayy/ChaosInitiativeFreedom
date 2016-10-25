@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 
 
@@ -8,6 +9,11 @@ public class CutSceneScript : MonoBehaviour {
 
 	public int SequencePos;
 	public List<SpriteRenderer> ImageList;
+
+	public Text title;
+	public Button startButton;
+
+
 
 	IEnumerator Fade()
 	{
@@ -24,16 +30,26 @@ public class CutSceneScript : MonoBehaviour {
 	void Start()
 	{
 		SequencePos = 0;
+
 	}
 
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if ((Input.GetKeyDown (KeyCode.Space)) && (SequencePos!= 7)  && (SequencePos!= 8)) {
 			StartCoroutine ("Fade");
 			SequencePos++;
+
 		}
+
+		if (SequencePos == 7) {
+			Debug.Log ("gfjgfjsdgf");
+			title.gameObject.SetActive (true);
+			startButton.gameObject.SetActive (true);
+			SequencePos++;
+		}
+
 		//display images
 		//if i==7
 		//do zoom thing
