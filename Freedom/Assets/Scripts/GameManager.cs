@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour {
 		case 0:
 			if (FreedomAmount < 50) {
 				foreach (GameObject thing in GameObjectList) {
+					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
 				}
 				previousFreedomLevel = 1;
@@ -178,6 +179,7 @@ public class GameManager : MonoBehaviour {
 				}
 
 				foreach (GameObject thing in GameObjectList) {
+					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (newFreedomLevel);
 				}
 				previousFreedomLevel = newFreedomLevel;
@@ -186,6 +188,7 @@ public class GameManager : MonoBehaviour {
 		case 2:
 			if (FreedomAmount >= 25) {
 				foreach (GameObject thing in GameObjectList) {
+					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
 				}
 				previousFreedomLevel = 1;
