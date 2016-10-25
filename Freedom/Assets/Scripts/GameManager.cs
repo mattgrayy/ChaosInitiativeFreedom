@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
 	public void UpHigh()
 	{
 		Debug.Log("up hight start");
-		FreedomAmount += 20f;
+		FreedomAmount += 10f;
 
 		if (FreedomAmount > 100f)
         {
@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour {
 	public void DownHigh()
 	{
 		Debug.Log ("down");
-		FreedomAmount -= 20f;
-		AmountInBar.fillAmount -= 0.2f;
+		FreedomAmount -= 10f;
+		AmountInBar.fillAmount -= 0.1f;
 	}
 
 	// Use this for initialization
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour {
 
 		switch (previousFreedomLevel) {
 		case 0:
-			if (FreedomAmount < 50) {
+			if (FreedomAmount < 65) {
 				foreach (GameObject thing in GameObjectList) {
 					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
@@ -169,10 +169,10 @@ public class GameManager : MonoBehaviour {
 			}
 			break;
 		case 1:
-			if (FreedomAmount >= 50 || FreedomAmount < 25) {
+			if (FreedomAmount >= 65 || FreedomAmount < 35) {
 				int newFreedomLevel;
 
-				if (FreedomAmount >= 50) {
+				if (FreedomAmount >= 65) {
 					newFreedomLevel = 0;
 				} else {
 					newFreedomLevel = 2;
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour {
 			}
 			break;
 		case 2:
-			if (FreedomAmount >= 25) {
+			if (FreedomAmount >= 35) {
 				foreach (GameObject thing in GameObjectList) {
 					Debug.Log (FreedomAmount);
 					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);

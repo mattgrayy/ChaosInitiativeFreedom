@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public StageControler stage;
     Rigidbody2D rb2D;
     [SerializeField]
-    float hitForce, moveSpeed;
+    public float hitForce, moveSpeed;
     public GameObject target;
     private float attackTime;
     public bool beenHit, knockBack, beenKilled;
@@ -72,6 +72,7 @@ public class Enemy : MonoBehaviour
             stage.NeedleKill();
             Debug.Log("needle kill");
             //Destroy(gameObject);
+            moveSpeed = 10;
             gameObject.SetActive(false);
         }
         if (coll.gameObject.tag == "Bat")
@@ -96,6 +97,7 @@ public class Enemy : MonoBehaviour
                 //Destroy(gameObject);
                 stage.BatKill();
                 beenKilled = true;
+                moveSpeed = 10;
                 gameObject.layer = LayerMask.NameToLayer("EnemyKill");
             }
         }
@@ -126,7 +128,7 @@ public class Enemy : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            moveSpeed = 1;
+            moveSpeed = 10;
         }
     }
 

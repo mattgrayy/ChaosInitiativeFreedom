@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
                 myAnimator.Play("Gaz norm walk test");
             }
 
-            rb2D.velocity = new Vector2(horizAxis * 5, rb2D.velocity.y);
+            rb2D.velocity = new Vector2(horizAxis * 8, rb2D.velocity.y);
         }
         else
         {
