@@ -24,45 +24,29 @@ public class CutSceneScript : MonoBehaviour
 
 
     IEnumerator Fade()
-    {
+	{
 
+		for (float f = 1f; f >= 0f; f -= 0.01f) {
+			Color alfha = ImageList [SequencePos].color;
+			alfha.a = f;
+			ImageList [SequencePos].color = alfha;
 
-        for (float f = 1f; f >= 0f; f -= 0.01f)
-        {
-            Color alfha = ImageList[SequencePos].color;
-            alfha.a = f;
-            ImageList[SequencePos].color = alfha;
-
-
-        }
-
-		if ((Input.GetKeyDown (KeyCode.Space)) && (SequencePos!= 7)  && (SequencePos!= 8)) {
-			StartCoroutine ("Fade");
-			SequencePos++;
-
+		}
 
 		switch (SequencePos) {
-		case 0:
-			TVclick.Play ();
-			break;
-		case 1:
-			Sniffing.Play ();
-			break;
+			case 0:
+				TVclick.Play ();
+				break;
+			case 1:
+				Sniffing.Play ();
+				break;
+			}
+
+			yield return null;
 		}
 
 
 
-
-        yield return null;
-    }
-
-
-		if (SequencePos == 7) {
-			Debug.Log ("gfjgfjsdgf");
-			title.gameObject.SetActive (true);
-			startButton.gameObject.SetActive (true);
-			SequencePos++;
-		}
 
 
     void Start()
@@ -72,6 +56,9 @@ public class CutSceneScript : MonoBehaviour
     }
 
 
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -79,7 +66,7 @@ public class CutSceneScript : MonoBehaviour
 
 
 
-        if ((Input.GetKeyDown(KeyCode.Space)) && (SequencePos != 3) && (SequencePos != 4))
+        if ((Input.GetKeyDown(KeyCode.Space)) && (SequencePos != 3) && (SequencePos < 4))
         {
 			
             StartCoroutine("Fade");

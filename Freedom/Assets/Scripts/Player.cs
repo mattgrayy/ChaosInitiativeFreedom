@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Player : MonoBehaviour {
 
@@ -24,6 +25,32 @@ public class Player : MonoBehaviour {
     SpriteRenderer myRenderer;
 
     float needleCooldown = 0.0f;
+
+	public void gethit()
+		{
+
+		StartCoroutine ("ColorFlash");
+
+
+		}
+
+	IEnumerator ColorFlash()
+	{
+		GetComponent<Renderer>().material.color = Color.red;
+		yield return new WaitForSeconds(0.1f);
+		GetComponent<Renderer>().material.color = Color.white;
+		yield return new WaitForSeconds(0.1f);
+		GetComponent<Renderer>().material.color = Color.red;
+		yield return new WaitForSeconds(0.1f);
+		GetComponent<Renderer>().material.color = Color.white;
+		yield return new WaitForSeconds(0.1f);
+		GetComponent<Renderer>().material.color = Color.red;
+		yield return new WaitForSeconds(0.1f);
+		GetComponent<Renderer>().material.color = Color.white;
+		yield return null;
+	}
+
+
 
     void Start()
     {

@@ -21,12 +21,19 @@ public class Enemy : MonoBehaviour
     public Animator myAnimator;
     public SpriteRenderer myRenderer;
 
+	public AudioSource playerHit;
+	public AudioSource EnemyHit;
+
     [SerializeField]
     RuntimeAnimatorController highController;
     [SerializeField]
     RuntimeAnimatorController midController;
     [SerializeField]
     RuntimeAnimatorController normController;
+
+
+
+
 
     void Start()
     {
@@ -105,9 +112,11 @@ public class Enemy : MonoBehaviour
             //Destroy(gameObject);
             moveSpeed = 10;
             gameObject.SetActive(false);
+			EnemyHit.Play ();
         }
         if (coll.gameObject.tag == "Bat")
         {
+			EnemyHit.Play ();
             StartCoroutine("ColorFlash");
             rb2D.AddForce(Vector2.up * hitForce, ForceMode2D.Impulse);
             knockBack = true;
@@ -151,6 +160,8 @@ public class Enemy : MonoBehaviour
                 }
                 GM.DownHigh();
                 attackTime = 0f;
+				coll.gameObject.GetComponent<Player> ().gethit ();
+				playerHit.Play ();
             }
         }
     }
