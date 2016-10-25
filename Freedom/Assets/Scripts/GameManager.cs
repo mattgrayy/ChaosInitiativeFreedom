@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour {
 	{
 		Debug.Log("up hight start");
 		FreedomAmount += 20f;
-		AmountInBar.fillAmount += 0.2f;
 
 		if (FreedomAmount > 100f)
         {
@@ -57,6 +56,7 @@ public class GameManager : MonoBehaviour {
 
 	public void DownHigh()
 	{
+		Debug.Log ("down");
 		FreedomAmount -= 20f;
 		AmountInBar.fillAmount -= 0.2f;
 	}

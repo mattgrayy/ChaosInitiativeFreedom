@@ -5,7 +5,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
 
-
+	[SerializeField] GameManager GM;
 	public StageControler stage;
     Rigidbody2D rb2D;
     [SerializeField] float hitForce, moveSpeed;
@@ -48,6 +48,7 @@ public class Enemy : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Needle")
         {
+			GM.AmountInBar.fillAmount += 0.2f;
 			stage.NeedleKill ();
 			Debug.Log("needle kill");
             //Destroy(gameObject);
@@ -81,7 +82,6 @@ public class Enemy : MonoBehaviour {
         {
             //Debug.Log("Attack Player");
             moveSpeed = 0;
-            //transform.GetComponent<GameManager>().DownHigh();
             attackTime = 0f;
         }
     }
@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour {
             attackTime = attackTime + Time.deltaTime;
             if (attackTime >= 0.5f)
             {
-                //transform.GetComponent<GameManager>().DownHigh();
+                GM.DownHigh();
                 attackTime = 0f;
                 Debug.Log("Attack after 1 second");
             }
