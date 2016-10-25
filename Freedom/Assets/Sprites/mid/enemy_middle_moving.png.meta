@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3c20c0e20b52ced4e9084978af2c72ed
-timeCreated: 1477306413
+timeCreated: 1477418045
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -34,7 +34,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -62,8 +62,8 @@ TextureImporter:
         y: 0
         width: 25
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: enemy_middle_moving_1
@@ -73,8 +73,8 @@ TextureImporter:
         y: 0
         width: 28
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: enemy_middle_moving_2
@@ -84,8 +84,8 @@ TextureImporter:
         y: 0
         width: 26
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: enemy_middle_moving_3
@@ -95,8 +95,8 @@ TextureImporter:
         y: 0
         width: 28
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: enemy_middle_moving_4
@@ -106,8 +106,8 @@ TextureImporter:
         y: 0
         width: 25
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

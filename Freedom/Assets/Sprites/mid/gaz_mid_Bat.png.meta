@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0c9b16c4d86f5564385709933e1d1d9d
-timeCreated: 1477410897
+timeCreated: 1477418065
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -38,7 +38,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -66,8 +66,8 @@ TextureImporter:
         y: 9
         width: 31
         height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_Bat_1
@@ -77,8 +77,8 @@ TextureImporter:
         y: 9
         width: 28
         height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_Bat_2
@@ -88,8 +88,8 @@ TextureImporter:
         y: 9
         width: 29
         height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_Bat_3
@@ -99,8 +99,8 @@ TextureImporter:
         y: 9
         width: 31
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_Bat_4
@@ -110,18 +110,18 @@ TextureImporter:
         y: 9
         width: 39
         height: 58
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16.5, y: 58}
-        - {x: -19.5, y: 56}
-        - {x: -19.5, y: 44}
-        - {x: -17.5, y: 40}
-        - {x: -11.5, y: 0}
-        - {x: 19.5, y: 0}
-        - {x: 19.5, y: 47}
-        - {x: 7.5, y: 58}
+      - - {x: -16.5, y: 29}
+        - {x: -19.5, y: 27}
+        - {x: -19.5, y: 15}
+        - {x: -17.5, y: 11}
+        - {x: -11.5, y: -29}
+        - {x: 19.5, y: -29}
+        - {x: 19.5, y: 18}
+        - {x: 7.5, y: 29}
     - name: gaz_mid_Bat_5
       rect:
         serializedVersion: 2
@@ -129,16 +129,16 @@ TextureImporter:
         y: 9
         width: 47
         height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -23.5, y: 61}
-        - {x: -23.5, y: 35}
-        - {x: -13.5, y: 0}
-        - {x: 23.5, y: 0}
-        - {x: 23.5, y: 48}
-        - {x: -7.5, y: 61}
+      - - {x: -23.5, y: 30.5}
+        - {x: -23.5, y: 4.5}
+        - {x: -13.5, y: -30.5}
+        - {x: 23.5, y: -30.5}
+        - {x: 23.5, y: 17.5}
+        - {x: -7.5, y: 30.5}
     - name: gaz_mid_Bat_6
       rect:
         serializedVersion: 2
@@ -146,17 +146,17 @@ TextureImporter:
         y: 9
         width: 47
         height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -22.5, y: 68}
-        - {x: -23.5, y: 66}
-        - {x: -23.5, y: 48}
-        - {x: -8.5, y: 0}
-        - {x: 23.5, y: 0}
-        - {x: 23.5, y: 55}
-        - {x: -5.5, y: 68}
+      - - {x: -22.5, y: 34}
+        - {x: -23.5, y: 32}
+        - {x: -23.5, y: 14}
+        - {x: -8.5, y: -34}
+        - {x: 23.5, y: -34}
+        - {x: 23.5, y: 21}
+        - {x: -5.5, y: 34}
     - name: gaz_mid_Bat_7
       rect:
         serializedVersion: 2
@@ -164,8 +164,8 @@ TextureImporter:
         y: 10
         width: 29
         height: 67
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_Bat_8
@@ -175,17 +175,17 @@ TextureImporter:
         y: 11
         width: 47
         height: 50
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12.5, y: 50}
-        - {x: -23.5, y: 47}
-        - {x: -23.5, y: 0}
-        - {x: 9.5, y: 0}
-        - {x: 23.5, y: 19}
-        - {x: 23.5, y: 49}
-        - {x: 22.5, y: 50}
+      - - {x: -12.5, y: 25}
+        - {x: -23.5, y: 22}
+        - {x: -23.5, y: -25}
+        - {x: 9.5, y: -25}
+        - {x: 23.5, y: -6}
+        - {x: 23.5, y: 24}
+        - {x: 22.5, y: 25}
     outline: []
   spritePackingTag: 
   userData: 

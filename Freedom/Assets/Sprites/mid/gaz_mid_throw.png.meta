@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a9602ec68ada6e743909da2240c94951
-timeCreated: 1477411086
+timeCreated: 1477418123
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -40,7 +40,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -68,17 +68,17 @@ TextureImporter:
         y: 3
         width: 39
         height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11.5, y: 53}
-        - {x: -14.5, y: 50}
-        - {x: -14.5, y: 16}
-        - {x: -10.5, y: 0}
-        - {x: 19.5, y: 0}
-        - {x: 19.5, y: 51}
-        - {x: 12.5, y: 53}
+      - - {x: -11.5, y: 26.5}
+        - {x: -14.5, y: 23.5}
+        - {x: -14.5, y: -10.5}
+        - {x: -10.5, y: -26.5}
+        - {x: 19.5, y: -26.5}
+        - {x: 19.5, y: 24.5}
+        - {x: 12.5, y: 26.5}
     - name: gaz_mid_throw_1
       rect:
         serializedVersion: 2
@@ -86,24 +86,24 @@ TextureImporter:
         y: 4
         width: 37
         height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18.5, y: 0}
-        - {x: -14.5, y: 0}
-        - {x: -14.5, y: 2}
-        - {x: -17.5, y: 6}
-        - {x: -18.5, y: 6}
-      - - {x: 2.5, y: 52}
-        - {x: -17.5, y: 52}
-        - {x: -18.5, y: 51}
-        - {x: -18.5, y: 20}
-        - {x: -14.5, y: 4}
-        - {x: -11.5, y: 0}
-        - {x: 18.5, y: 0}
-        - {x: 18.5, y: 38}
-        - {x: 17.5, y: 48}
+      - - {x: -18.5, y: -26.5}
+        - {x: -14.5, y: -26.5}
+        - {x: -14.5, y: -24.5}
+        - {x: -17.5, y: -20.5}
+        - {x: -18.5, y: -20.5}
+      - - {x: 2.5, y: 25.5}
+        - {x: -17.5, y: 25.5}
+        - {x: -18.5, y: 24.5}
+        - {x: -18.5, y: -6.5}
+        - {x: -14.5, y: -22.5}
+        - {x: -11.5, y: -26.5}
+        - {x: 18.5, y: -26.5}
+        - {x: 18.5, y: 11.5}
+        - {x: 17.5, y: 21.5}
     - name: gaz_mid_throw_2
       rect:
         serializedVersion: 2
@@ -111,22 +111,22 @@ TextureImporter:
         y: 5
         width: 42
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 5, y: 51}
-        - {x: -15, y: 51}
-        - {x: -17, y: 49}
-        - {x: -15, y: 46}
-        - {x: -8, y: 45}
-        - {x: -20, y: 46}
-        - {x: -21, y: 46}
-        - {x: -21, y: 10}
-        - {x: -18, y: 0}
-        - {x: 21, y: 0}
-        - {x: 21, y: 39}
-        - {x: 19, y: 48}
+      - - {x: 5, y: 25.5}
+        - {x: -15, y: 25.5}
+        - {x: -17, y: 23.5}
+        - {x: -15, y: 20.5}
+        - {x: -8, y: 19.5}
+        - {x: -20, y: 20.5}
+        - {x: -21, y: 20.5}
+        - {x: -21, y: -15.5}
+        - {x: -18, y: -25.5}
+        - {x: 21, y: -25.5}
+        - {x: 21, y: 13.5}
+        - {x: 19, y: 22.5}
     - name: gaz_mid_throw_3
       rect:
         serializedVersion: 2
@@ -134,8 +134,8 @@ TextureImporter:
         y: 3
         width: 29
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_throw_4
@@ -145,8 +145,8 @@ TextureImporter:
         y: 3
         width: 29
         height: 49
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_throw_5
@@ -156,8 +156,8 @@ TextureImporter:
         y: 3
         width: 29
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_throw_6
@@ -167,8 +167,8 @@ TextureImporter:
         y: 3
         width: 30
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_throw_7
@@ -178,8 +178,8 @@ TextureImporter:
         y: 2
         width: 29
         height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: gaz_mid_throw_8
@@ -189,27 +189,27 @@ TextureImporter:
         y: 4
         width: 42
         height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 3, y: 53}
-        - {x: -13, y: 53}
-        - {x: -17, y: 50}
-        - {x: -15, y: 47}
-        - {x: -8, y: 46}
-        - {x: -20, y: 47}
-        - {x: -21, y: 47}
-        - {x: -21, y: 8}
-        - {x: -19, y: 0}
-        - {x: 21, y: 0}
-        - {x: 21, y: 36}
-        - {x: 20, y: 50}
-      - - {x: 18, y: 43}
-        - {x: 20, y: 41}
-        - {x: 21, y: 41}
-        - {x: 21, y: 46}
-        - {x: 19, y: 46}
+      - - {x: 3, y: 26.5}
+        - {x: -13, y: 26.5}
+        - {x: -17, y: 23.5}
+        - {x: -15, y: 20.5}
+        - {x: -8, y: 19.5}
+        - {x: -20, y: 20.5}
+        - {x: -21, y: 20.5}
+        - {x: -21, y: -18.5}
+        - {x: -19, y: -26.5}
+        - {x: 21, y: -26.5}
+        - {x: 21, y: 9.5}
+        - {x: 20, y: 23.5}
+      - - {x: 18, y: 16.5}
+        - {x: 20, y: 14.5}
+        - {x: 21, y: 14.5}
+        - {x: 21, y: 19.5}
+        - {x: 19, y: 19.5}
     - name: gaz_mid_throw_9
       rect:
         serializedVersion: 2
@@ -217,19 +217,19 @@ TextureImporter:
         y: 5
         width: 37
         height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 2.5, y: 52}
-        - {x: -17.5, y: 52}
-        - {x: -18.5, y: 51}
-        - {x: -18.5, y: 20}
-        - {x: -14.5, y: 4}
-        - {x: -11.5, y: 0}
-        - {x: 18.5, y: 0}
-        - {x: 18.5, y: 38}
-        - {x: 17.5, y: 48}
+      - - {x: 2.5, y: 26}
+        - {x: -17.5, y: 26}
+        - {x: -18.5, y: 25}
+        - {x: -18.5, y: -6}
+        - {x: -14.5, y: -22}
+        - {x: -11.5, y: -26}
+        - {x: 18.5, y: -26}
+        - {x: 18.5, y: 12}
+        - {x: 17.5, y: 22}
     - name: gaz_mid_throw_10
       rect:
         serializedVersion: 2
@@ -237,16 +237,16 @@ TextureImporter:
         y: 4
         width: 32
         height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 54}
-        - {x: -16, y: 13}
-        - {x: -9, y: 0}
-        - {x: 16, y: 0}
-        - {x: 16, y: 40}
-        - {x: 10, y: 54}
+      - - {x: -16, y: 26.5}
+        - {x: -16, y: -14.5}
+        - {x: -9, y: -27.5}
+        - {x: 16, y: -27.5}
+        - {x: 16, y: 12.5}
+        - {x: 10, y: 26.5}
     outline: []
   spritePackingTag: 
   userData: 

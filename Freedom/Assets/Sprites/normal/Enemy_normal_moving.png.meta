@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ce135e9c0d63d2642a871b093cbb95f6
-timeCreated: 1477316105
+timeCreated: 1477418183
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -40,7 +40,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -68,8 +68,8 @@ TextureImporter:
         y: 1
         width: 23
         height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_1
@@ -79,8 +79,8 @@ TextureImporter:
         y: 1
         width: 18
         height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_2
@@ -90,8 +90,8 @@ TextureImporter:
         y: 1
         width: 16
         height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_3
@@ -101,8 +101,8 @@ TextureImporter:
         y: 1
         width: 19
         height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_4
@@ -112,8 +112,8 @@ TextureImporter:
         y: 0
         width: 23
         height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_5
@@ -123,8 +123,8 @@ TextureImporter:
         y: 1
         width: 22
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_6
@@ -134,8 +134,8 @@ TextureImporter:
         y: 1
         width: 26
         height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_7
@@ -145,8 +145,8 @@ TextureImporter:
         y: 1
         width: 18
         height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_8
@@ -156,8 +156,8 @@ TextureImporter:
         y: 0
         width: 14
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_9
@@ -167,8 +167,8 @@ TextureImporter:
         y: 0
         width: 17
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Enemy_normal_moving_10
@@ -178,8 +178,8 @@ TextureImporter:
         y: 0
         width: 21
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

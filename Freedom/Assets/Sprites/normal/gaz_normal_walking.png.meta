@@ -68,12 +68,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18.5, y: 23}
-        - {x: -18.5, y: -19}
-        - {x: -15.5, y: -23}
+      - - {x: -17.5, y: 23}
+        - {x: -18.5, y: 21}
+        - {x: -18.5, y: -12}
+        - {x: -16.5, y: -21}
+        - {x: -12.5, y: -23}
         - {x: 18.5, y: -23}
-        - {x: 18.5, y: 22}
-        - {x: 14.5, y: 23}
+        - {x: 18.5, y: 23}
     - name: gaz_normal_walking_1
       rect:
         serializedVersion: 2
@@ -86,9 +87,7 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -18.5, y: 23}
-        - {x: -18.5, y: -8}
-        - {x: -16.5, y: -22}
-        - {x: -11.5, y: -23}
+        - {x: -18.5, y: -23}
         - {x: 18.5, y: -23}
         - {x: 18.5, y: 23}
     - name: gaz_normal_walking_2
@@ -103,11 +102,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -19, y: 23}
-        - {x: -19, y: -18}
-        - {x: -18, y: -23}
+        - {x: -19, y: -23}
         - {x: 19, y: -23}
-        - {x: 19, y: 11}
-        - {x: 12, y: 23}
+        - {x: 19, y: 19}
+        - {x: 13, y: 23}
     - name: gaz_normal_walking_4
       rect:
         serializedVersion: 2
@@ -152,11 +150,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -17, y: 23}
-        - {x: -17, y: -13}
-        - {x: -13, y: -23}
+        - {x: -17, y: -16}
+        - {x: -15, y: -23}
         - {x: 17, y: -23}
-        - {x: 17, y: 19}
-        - {x: 11, y: 23}
+        - {x: 17, y: 12}
+        - {x: 12, y: 23}
     outline: []
   spritePackingTag: 
   userData: 

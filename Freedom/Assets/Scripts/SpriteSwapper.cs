@@ -42,11 +42,11 @@ public class SpriteSwapper : MonoBehaviour {
             if (sprites[current].color.a > 0)
             {
                 Color tmp = sprites[current].color;
-                tmp.a -= 0.05f;
+                tmp.a -= 0.02f;
                 sprites[current].color = tmp;
 
                 tmp = sprites[next].color;
-                tmp.a += 0.05f;
+                tmp.a += 0.02f;
                 sprites[next].color = tmp;
             }
             else

@@ -17,13 +17,25 @@ public class Enemy : MonoBehaviour
     public bool beenHit, knockBack, beenKilled;
     float elapsedTime;
 
+    int highness = 0;
+    public Animator myAnimator;
+    public SpriteRenderer myRenderer;
+
+    [SerializeField]
+    RuntimeAnimatorController highController;
+    [SerializeField]
+    RuntimeAnimatorController midController;
+    [SerializeField]
+    RuntimeAnimatorController normController;
+
     void Start()
     {
         beenHit = false;
         knockBack = false;
         rb2D = GetComponent<Rigidbody2D>();
         //target = GetComponent<>();
-
+        myAnimator = GetComponent<Animator>();
+        myRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -31,23 +43,26 @@ public class Enemy : MonoBehaviour
         if (!knockBack)
         {
             if (target.transform.position.x < transform.position.x)
-            { rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y); }
+            {
+                rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y);
+                myRenderer.flipX = true;
+            }
             else if (target.transform.position.x > transform.position.x)
-            { rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y); }
+            {
+                rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y);
+                myRenderer.flipX = false;
+            }
         }
         else if (knockBack)
         {
             elapsedTime = elapsedTime + Time.deltaTime;
             if (beenKilled)
             {
-                Debug.Log("killed loop");
                 if (elapsedTime >= 3f)
                 {
-                    Debug.Log("Change Layer");
                     knockBack = false;
                     beenKilled = false;
                     gameObject.layer = LayerMask.NameToLayer("Enemy");
-                    Debug.Log("Setting to false");
                     gameObject.SetActive(false);
                 }
             }
@@ -55,7 +70,6 @@ public class Enemy : MonoBehaviour
             {
                 if (elapsedTime >= 5f)
                 {
-                    Debug.Log("wrong if");
                     knockBack = false;
                     gameObject.layer = LayerMask.NameToLayer("Enemy");
                 }
@@ -64,13 +78,30 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void changeHighness(int newHighness)
+    {
+        highness = newHighness;
+        switch (highness)
+        {
+            case 0:
+                myAnimator.runtimeAnimatorController = highController;
+                break;
+            case 1:
+                myAnimator.runtimeAnimatorController = midController;
+                break;
+            case 2:
+                myAnimator.runtimeAnimatorController = normController;
+                break;
+            default:
+                break;
+        }
+    }
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Needle")
         {
-            GM.AmountInBar.fillAmount += 0.2f;
+            GM.AmountInBar.fillAmount += 0.1f;
             stage.NeedleKill();
-            Debug.Log("needle kill");
             //Destroy(gameObject);
             moveSpeed = 10;
             gameObject.SetActive(false);
@@ -93,8 +124,6 @@ public class Enemy : MonoBehaviour
             }
             else if (beenHit)
             {
-                Debug.Log("bat kill");
-                //Destroy(gameObject);
                 stage.BatKill();
                 beenKilled = true;
                 moveSpeed = 10;
@@ -103,7 +132,6 @@ public class Enemy : MonoBehaviour
         }
         if (coll.gameObject.tag == "Player")
         {
-            //Debug.Log("Attack Player");
             moveSpeed = 0;
             attackTime = 0f;
         }
@@ -117,9 +145,12 @@ public class Enemy : MonoBehaviour
             attackTime = attackTime + Time.deltaTime;
             if (attackTime >= 0.5f)
             {
+                if (highness == 2)
+                {
+                    myAnimator.Play("enemy_normal_hitting");
+                }
                 GM.DownHigh();
                 attackTime = 0f;
-                Debug.Log("Attack after 1 second");
             }
         }
     }
