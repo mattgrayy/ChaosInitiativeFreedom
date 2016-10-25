@@ -33,7 +33,13 @@ public class CutSceneScript : MonoBehaviour
             alfha.a = f;
             ImageList[SequencePos].color = alfha;
 
+
         }
+
+		if ((Input.GetKeyDown (KeyCode.Space)) && (SequencePos!= 7)  && (SequencePos!= 8)) {
+			StartCoroutine ("Fade");
+			SequencePos++;
+
 
 		switch (SequencePos) {
 		case 0:
@@ -46,8 +52,17 @@ public class CutSceneScript : MonoBehaviour
 
 
 
+
         yield return null;
     }
+
+
+		if (SequencePos == 7) {
+			Debug.Log ("gfjgfjsdgf");
+			title.gameObject.SetActive (true);
+			startButton.gameObject.SetActive (true);
+			SequencePos++;
+		}
 
 
     void Start()
