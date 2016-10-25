@@ -37,18 +37,14 @@ public class CutSceneScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ((Input.GetKeyDown (KeyCode.Space)) && (SequencePos!= 3)  && (SequencePos!= 4)) {
+		if ((Input.GetKeyDown (KeyCode.Space)) && (SequencePos!= 7)  && (SequencePos!= 8)) {
 			StartCoroutine ("Fade");
 			SequencePos++;
 
 		}
 
-
-		if (SequencePos == 3) {
-			Debug.Log ("gfjgfjsdgf");
-
 		if (SequencePos == 7) {
-
+			Debug.Log ("gfjgfjsdgf");
 			title.gameObject.SetActive (true);
 			startButton.gameObject.SetActive (true);
 			SequencePos++;
