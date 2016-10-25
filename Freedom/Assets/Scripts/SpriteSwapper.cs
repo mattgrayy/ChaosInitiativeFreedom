@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 public class SpriteSwapper : MonoBehaviour {
 
+	//0 = high
+	//1 = meduim
+	//2 = low
     [SerializeField] List<SpriteRenderer> sprites;
 
     int current = 0;

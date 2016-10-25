@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+	int previousFreedomLevel = 0;
     public float FreedomAmount;
 	public float ReduceSpeed = 1f;
 	public Image AmountInBar;
@@ -72,8 +73,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (!Overload)
-        {
+		if (!Overload) {
 			FreedomAmount -= ReduceSpeed * Time.deltaTime;
 			AmountInBar.fillAmount -= (ReduceSpeed / 100f) * Time.deltaTime;
 
@@ -83,15 +83,13 @@ public class GameManager : MonoBehaviour {
 
 			}
 
-			switch (RainbowColor)
-			{
+			switch (RainbowColor) {
 
 			//red to orange
 			case 1:
 				AmountInBar.CrossFadeColor (Orange, 0.7f, true, true);
 				FadeTimer++;			
-				if (FadeTimer >= 50f)
-                {
+				if (FadeTimer >= 50f) {
 					RainbowColor = 2;
 					FadeTimer = 0f;
 				}				
@@ -101,8 +99,7 @@ public class GameManager : MonoBehaviour {
 				AmountInBar.CrossFadeColor (Yellow, 0.7f, true, true);
 
 				FadeTimer++;			
-				if (FadeTimer >= 50f)
-                {
+				if (FadeTimer >= 50f) {
 					RainbowColor = 3;
 					FadeTimer = 0f;
 				}
@@ -112,8 +109,7 @@ public class GameManager : MonoBehaviour {
 			case 3:
 				AmountInBar.CrossFadeColor (Green, 0.7f, true, true);
 				FadeTimer++;			
-				if (FadeTimer >= 50f)
-                {
+				if (FadeTimer >= 50f) {
 					RainbowColor = 4;
 					FadeTimer = 0f;
 				}
@@ -123,8 +119,7 @@ public class GameManager : MonoBehaviour {
 			case 4:
 				AmountInBar.CrossFadeColor (Blue, 0.7f, true, true);
 				FadeTimer++;			
-				if (FadeTimer >= 50f)
-                {
+				if (FadeTimer >= 50f) {
 					RainbowColor = 5;
 					FadeTimer = 0f;
 				}
@@ -135,24 +130,20 @@ public class GameManager : MonoBehaviour {
 				AmountInBar.CrossFadeColor (Red, 0.7f, true, true);
 				FadeTimer++;		
                     	
-				if (FadeTimer >= 60f)
-                {
+				if (FadeTimer >= 60f) {
 					RainbowColor = 1;
 					FadeTimer = 0f;
 				}
 				break;
 			}
-		}
-        else
-        {
-		//do overlaod stuff
+		} else {
+			//do overlaod stuff
 
 			AmountInBar.CrossFadeColor (Color.red, 1f, true, true);
 			OverloadCounter -= 10f * Time.deltaTime;
 
-			if (OverloadCounter <= 0f)
-            {
-                //overloadParticle.Stop();
+			if (OverloadCounter <= 0f) {
+				//overloadParticle.Stop();
 				Overload = false;
 				AmountInBar.CrossFadeColor (Color.blue, 1f, true, true);
 				OverloadCounter = 100f;
@@ -167,10 +158,41 @@ public class GameManager : MonoBehaviour {
 		//send the freedom value to all things
 		//list of tihgs
 
-		foreach (GameObject thing in GameObjectList) {
+		switch (previousFreedomLevel) {
+		case 0:
+			if (FreedomAmount < 50) {
+				foreach (GameObject thing in GameObjectList) {
+					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
+				}
+				previousFreedomLevel = 1;
+			}
+			break;
+		case 1:
+			if (FreedomAmount >= 50 || FreedomAmount < 25) {
+				int newFreedomLevel;
 
-			//			thing.
+				if (FreedomAmount >= 50) {
+					newFreedomLevel = 0;
+				} else {
+					newFreedomLevel = 2;
+				}
 
+				foreach (GameObject thing in GameObjectList) {
+					thing.GetComponent<SpriteControler> ().setFreedomAmount (newFreedomLevel);
+				}
+				previousFreedomLevel = newFreedomLevel;
+			}
+			break;
+		case 2:
+			if (FreedomAmount >= 25) {
+				foreach (GameObject thing in GameObjectList) {
+					thing.GetComponent<SpriteControler> ().setFreedomAmount (1);
+				}
+				previousFreedomLevel = 1;
+			}
+			break;
+		default:
+			break;
 		}
 	}
 }
